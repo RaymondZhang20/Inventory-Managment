@@ -1,0 +1,102 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>inventory management website</title>
+<!--  <meta name="description" content="">-->
+<!--  <meta name="viewport" content="width=device-width, initial-scale=1">-->
+
+<!--  <meta property="og:title" content="">-->
+<!--  <meta property="og:type" content="">-->
+<!--  <meta property="og:url" content="">-->
+<!--  <meta property="og:image" content="">-->
+
+<!--  <link rel="manifest" href="site.webmanifest">-->
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/style.css">
+<!--  <link rel="stylesheet" href="css/normalize.css">-->
+<!--  <link rel="stylesheet" href="css/main.css">-->
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body id="body" onload="loadInventory()">
+  <div id="header">
+    <h1>Inventory Management Website</h1>
+    <p>individual assignment 1</p>
+  </div>
+
+  <ul id="nav_bar">
+    <li class="nav_bar_list"><a id="home_bar" class="active" onClick="clickNavBar(this)">Home</a></li>
+    <li class="nav_bar_list"><a id="about_bar" class="" onClick="clickNavBar(this)">About</a></li>
+  </ul>
+
+  <section id="home_page" class="page">
+
+    <div id="whole_container">
+    <div id="form_container">
+    <form id="form">
+      <label for="name_form">Name:</label>
+      <input type="text" id="name_form" name="itemName" required>
+
+      <label for="description_form">Description:</label>
+      <textarea id="description_form" name="itemDescription" required></textarea>
+
+      <label for="price_form">Price:</label>
+      <input type="number" id="price_form" name="itemPrice" step="0.01" required>
+
+      <label for="image_form">Image URL:(none if no image)</label>
+      <input type="url" id="image_form" name="itemImage" required>
+
+      <div class="button-container">
+        <button type="button" onclick="addItem()">Add Item</button>
+        <button type="button" onclick="clearForm()">Clear</button>
+        <button type="button" onclick="deleteAllCards()">Delete All</button>
+      </div>
+    </form>
+    </div>
+
+    <div id="inv_container">
+      <h1>Inventory</h1>
+    <div id="inv_list">
+<!--      <div class="card">-->
+<!--        <img src="./icon.png" alt="Item 1" class="card_image">-->
+<!--        <div class="card_content">-->
+<!--          <h2 class="card_name">Item 1</h2>-->
+<!--          <p class="card_description">Description of Item 1</p>-->
+<!--          <p class="card_price">$10.99</p>-->
+<!--        </div>-->
+<!--      </div>-->
+
+    </div>
+    </div>
+    </div>
+
+  </section>
+
+  <section id="about_page" class="page hidden">
+    <h2>About me</h2>
+    <p>I am currently a third-year student in UBC majoring in CS and minoring in DS.</p>
+    <p>Besides, this term is also my second coop term.</p>
+    <p>Hoping to learn a lot in this course.</p>
+  </section>
+
+  <div class="footer">
+    <p>By: Xueyong Zhang 2501923</p>
+  </div>
+<!--  <script src="js/vendor/modernizr-3.11.2.min.js"></script>-->
+<!--  <script src="js/plugins.js"></script>-->
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<!--  <script>-->
+<!--    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;-->
+<!--    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')-->
+<!--  </script>-->
+<!--  <script src="https://www.google-analytics.com/analytics.js" async></script>-->
+</body>
+
+</html>
